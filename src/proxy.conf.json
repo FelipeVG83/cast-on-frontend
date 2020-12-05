@@ -1,0 +1,10 @@
+{
+    "/artistas/**": {
+        "target": "http://localhost:8080/artista-service/",
+        "secure": false
+    },
+    "/artistas": {
+        "target": "http://localhost:8080/artista-service/",
+        "secure": false
+    }
+}

@@ -1,0 +1,45 @@
+<h4 class="titulo"><i class="fas fa-guitar"></i> Artistas
+    <div class="float-right">
+        <input type="text" placeholder="Pesquisar" class="maRight" [(ngModel)]="Pesquisa" />
+        <button mat-raised-button color="primary" class="float-right" (click)="adicionar()">{{this.selection.isEmpty() ? 'Adicionar' : 'Alterar'}}</button>
+        <button mat-raised-button color="warn" class="float-right maRight" (click)="deletar()">Deletar</button>
+        <button mat-button color="accent" class="float-right maRight" (click)="listar()">Pesquisar</button>
+    </div>
+</h4>
+<div class="row">
+    <table mat-table [dataSource]="dataSource" class="col-12 mat-elevation-z8">
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="Seleciona">
+            <th mat-header-cell *matHeaderCellDef>
+
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="ID">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Nome Column -->
+        <ng-container matColumnDef="Nome">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+        </ng-container>
+
+        <!-- CPF Column -->
+        <ng-container matColumnDef="CPF">
+            <th mat-header-cell *matHeaderCellDef> CPF </th>
+            <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+<notifier-container></notifier-container>
