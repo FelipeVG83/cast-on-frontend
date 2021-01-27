@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 	}
 
 	cadastrar() {
-		this.router.navigate(['/adiciona-artista']);
+		this.router.navigate(['/signup']);
 	}
 
 }

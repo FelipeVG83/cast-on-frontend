@@ -4,10 +4,12 @@ import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { AdicionaArtistaComponent } from './adiciona-artista/adiciona-artista.component';
 import { ArtistasComponent } from './artistas/artistas.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: 'main', component: MainComponent },
+	{ path: 'signup', component: SignupComponent },
 	{ path: 'artistas/adicionar', component: AdicionaArtistaComponent },
 	{ path: 'artistas', component: ArtistasComponent },
 	{ path: '', redirectTo: '/login', pathMatch: 'full' },

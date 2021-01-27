@@ -1,16 +1,19 @@
 <div class="row">
     <div class="col-md-12">
         <div class="row">
-            <mat-form-field class="col-8">
+            <mat-form-field class="col-7">
                 <input matInput type="text" placeholder="Nome" [(ngModel)]="Nome" />
             </mat-form-field>
-            <mat-form-field class="col-4">
-                <input matInput type="text" placeholder="CPF" [(ngModel)]="CPF" />
+            <mat-form-field class="col-5">
+                <input matInput type="text" placeholder="CNPJ" [(ngModel)]="CPF" />
             </mat-form-field>
-            <mat-form-field class="col-4">
-                <input matInput type="text" placeholder="Data de Nascimento" [(ngModel)]="dataNascimento" mask="00/00/0000" [dropSpecialCharacters]="false" />
+            <mat-form-field class="col-7">
+                <input matInput type="text" placeholder="Razão Social" [(ngModel)]="RazaoSocial" />
             </mat-form-field>
-            <mat-form-field class="col-8">
+            <mat-form-field class="col-5">
+                <input matInput type="text" placeholder="Telefone" [(ngModel)]="Telefone" mask="(00) 0000-0000" [dropSpecialCharacters]="false" />
+            </mat-form-field>
+            <mat-form-field class="col-6">
                 <input matInput type="email" placeholder="E-mail" [(ngModel)]="Email" />
             </mat-form-field>
         </div>

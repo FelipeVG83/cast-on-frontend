@@ -24,6 +24,8 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { AdicionaArtistaComponent } from './adiciona-artista/adiciona-artista.component';
 import { ArtistasComponent } from './artistas/artistas.component';
+import { SignupComponent } from './signup/signup.component';
+import { AdicionaContratanteComponent } from './adiciona-contratante/adiciona-contratante.component';
 
 export let options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -38,7 +40,9 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 		LoginComponent,
 		MainComponent,
 		AdicionaArtistaComponent,
-		ArtistasComponent
+		ArtistasComponent,
+		SignupComponent,
+		AdicionaContratanteComponent
 	],
 	imports: [
 		BrowserModule,

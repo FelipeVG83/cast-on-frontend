@@ -1,0 +1,27 @@
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row header">
+                        <div class="col-md-6"><button mat-button [color]="TipoCadastro == 'A' ? 'primary': 'basic'" class="float-right bold" (click)="TipoCadastro = 'A'"><i class="fas fa-user-alt"></i> Artista</button></div>
+                        <div class="col-md-6"><button mat-button [color]="TipoCadastro == 'C' ? 'primary': 'basic'" class="float-left bold" (click)="TipoCadastro = 'C'"><i class="fas fa-store-alt"></i> Contratante</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" [hidden]="TipoCadastro != 'A'">
+                            <app-adiciona-artista></app-adiciona-artista>
+                        </div>
+                        <div class="col-md-12" [hidden]="TipoCadastro != 'C'">
+                            <app-adiciona-contratante></app-adiciona-contratante>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
